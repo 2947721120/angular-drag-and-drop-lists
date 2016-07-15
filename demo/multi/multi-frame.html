@@ -1,8 +1,8 @@
-<h1>Demo: Multiselect Lists</h1>
+<h1>演示：多选列表</h1>
 
 <div class="alert alert-success">
-    <strong>Instructions:</strong>
-    Click on items to select/unselect them. When dragging, all selected items will be moved at once.
+    <strong>指令(Instructions):</strong>
+    点击项目选择/取消他们。当拖动时，所有选定的项目将立即移动.
 </div>
 
 <div class="multiDemo row">
@@ -12,7 +12,7 @@
             <div ng-repeat="list in models" class="col-md-6">
                 <div class="panel panel-info">
                     <div class="panel-heading">
-                        <h3 class="panel-title">List {{list.listName}}</h3>
+                        <h3 class="panel-title">列表 {{list.listName}}</h3>
                     </div>
                     <div class="panel-body" ng-include="'multi/multi.html'"></div>
                 </div>
@@ -26,7 +26,7 @@
     <div class="col-md-4">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">Generated Model</h3>
+                <h3 class="panel-title">生成的模型</h3>
             </div>
             <div class="panel-body">
                 <pre class="code">{{modelAsJson}}</pre>
