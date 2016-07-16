@@ -2,7 +2,7 @@ angular.module("demo").controller("AdvancedDemoController", function($scope) {
 
     $scope.dragoverCallback = function(event, index, external, type) {
         $scope.logListEvent('dragged over', event, index, external, type);
-        // Disallow dropping in the third row. Could also be done with dnd-disable-if.
+        // 不允许在第三排掉。也可以用和禁用如果。
         return index < 10;
     };
 
@@ -28,7 +28,7 @@ angular.module("demo").controller("AdvancedDemoController", function($scope) {
 
     $scope.model = [];
 
-    // Initialize model
+    //初始化模型
     var id = 10;
     for (var i = 0; i < 3; ++i) {
         $scope.model.push([]);
