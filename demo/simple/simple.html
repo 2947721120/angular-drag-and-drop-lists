@@ -1,10 +1,10 @@
-<!-- The dnd-list directive allows to drop elements into it.
-     The dropped data will be added to the referenced list -->
+<!-- DND列表指令允许下降的元素进去。
+将被丢弃的数据将被添加到引用列表中 -->
 <ul dnd-list="list">
-    <!-- The dnd-draggable directive makes an element draggable and will
-         transfer the object that was assigned to it. If an element was
-         dragged away, you have to remove it from the original list
-         yourself using the dnd-moved attribute -->
+    <!--DND拖动指令使得元素拖动并将
+转移被分配给它的对象。如果一个元素是
+拖走了，你必须把它从原来的列表中删除
+自己用的和移动的属性 -->
     <li ng-repeat="item in list"
         dnd-draggable="item"
         dnd-moved="list.splice($index, 1)"
