@@ -9,7 +9,7 @@ angular.module("demo").directive('viewSource', function($http, $timeout) {
 
             scope.models = {
                 types: [
-                    {extension: "html", language: "markup", label: "Markup"},
+                    {extension: "html", language: "markup", label: "标记"},
                     {extension: "css", language: "css", label: "CSS"},
                     {extension: "js", language: "javascript", label: "Javascript"},
                 ],
