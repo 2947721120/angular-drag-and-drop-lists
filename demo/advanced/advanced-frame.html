@@ -1,18 +1,18 @@
-<h1>Demo: Advanced Features</h1>
+<h1>演示：先进的功能</h1>
 
 <ul>
-    <li><strong>Callbacks:</strong> The directives offer various callbacks, which in this example will log the events to the console.
-        Additionally, the callbacks on the dnd-list can prevent an element from being dropped. In this example <strong>you can't drop elements
-        after the 10th position</strong>, because we are preventing that in the dnd-dragover callback.</li>
-    <li><strong>dnd-allowed-types in nested lists:</strong> We are using the dnd-allowed-types attribute to ensure that Containers
-        only accept items, but not other containers.</li>
-    <li><strong>dnd-horizontal-list:</strong> This attribute tells the positioning algorithm to drop incoming elements left or right
-        of the existing elements, instead of above or below.</li>
-    <li><strong>dnd-external-sources:</strong> Allows to drag and drop elements accross browser windows, which you can test in this
-        example. The downside to this is that the lists will accept arbitrary text to be dropped. To prevent that, the dnd-drop callback
-        verifies that the dropped element is of the desired format.</li>
-    <li><strong>dnd-effect-allowed:</strong> This attribute is set to 'copyMove' in this example, which means that the user can choose
-        whether to copy or move an element by holding down the Ctrl key. Note that this doesn't work in Chrome very well.</li>
+    <li><strong>回调:</strong> 指令提供了不同的回调函数，这在本例中要记录的事件到控制台。
+此外，在DND列表回调可以防止一个元素从被丢弃。在这个例子中 <strong>你不能放弃元素
+后第十位</strong>, 因为我们是防止在DND DragOver回调.</li>
+    <li><strong>dnd-allowed-types 在嵌套列表:</strong>我们使用的是允许的类型属性来确保容器的DND
+只接受项目，但不是其他容器.</li>
+    <li><strong>dnd-horizontal-list:</strong> 此属性告诉定位算法来删除左或右的传入元素
+现有的元素，而不是上面或下面.</li>
+    <li><strong>dnd-external-sources:</strong> 允许拖放元素在浏览器窗口，你可以测试在这
+例子.这的缺点是，列表将接受任意的文本被删除。为了防止这种情况，DND的下跌回调
+验证所丢弃的元素是所需的格式.</li>
+    <li><strong>dnd-effect-allowed:</strong> 此属性设置为“copymove”在这个例子中，这意味着用户可以选择
+是否复制或按住Ctrl键移动元素。请注意，这不工作在铬很好.</li>
 </ul>
 
 <div class="advancedDemo row">
@@ -23,5 +23,5 @@
 
 <div view-source="advanced"></div>
 
-<h2>Generated Model</h2>
+<h2>生成的模型</h2>
 <pre>{{modelAsJson}}</pre>
