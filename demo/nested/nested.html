@@ -1,9 +1,9 @@
-<!-- Markup for lists inside the dropzone. It's inside a seperate template
-     because it will be used recursively. The dnd-list directive enables
-     to drop elements into the referenced array. The dnd-draggable directive
-     makes an element draggable and will transfer the object that was
-     assigned to it. If an element was dragged away, you have to remove
-     it from the original list yourself using the dnd-moved attribute -->
+<!-- 标记为悬浮窗内的列表。这是一个单独的模板内
+     因为它会被递归使用。免打扰列表指令允许
+     砸元素融入引用数组。免打扰，可拖动指令
+     使元素可拖动，将传递一个在该对象
+     分配给它。如果一个元素被拖走，你必须删除
+     它从原来的列表中自己使用的DND-移动属性 -->
 <script type="text/ng-template" id="list.html">
     <ul dnd-list="list">
         <li ng-repeat="item in list"
@@ -17,8 +17,8 @@
     </ul>
 </script>
 
-<!-- This template is responsible for rendering a container element. It uses
-     the above list template to render each container column -->
+<!-- 这个模板是负责渲染的容器元素。它使用
+     上面的列表模板来呈现每个容器列 -->
 <script type="text/ng-template" id="container.html">
     <div class="container-element box box-blue">
         <h3>Container {{item.id}}</h3>
@@ -27,18 +27,18 @@
     </div>
 </script>
 
-<!-- Template for a normal list item -->
+<!-- 模板一个正常的列表项 -->
 <script type="text/ng-template" id="item.html">
-    <div class="item">Item {{item.id}}</div>
+    <div class="item">项目 {{item.id}}</div>
 </script>
 
-<!-- Main area with dropzones and source code -->
+<!-- 与dropzones和源代码主要区域 -->
 <div class="col-md-10">
     <div class="row">
         <div ng-repeat="(zone, list) in models.dropzones" class="col-md-6">
             <div class="dropzone box box-yellow">
-                <!-- The dropzone also uses the list template -->
-                <h3>Dropzone {{zone}}</h3>
+                <!-- 悬浮窗也使用列表模板 -->
+                <h3>降落区 {{zone}}</h3>
                 <div ng-include="'list.html'"></div>
             </div>
         </div>
@@ -46,7 +46,7 @@
 
     <div view-source="nested"></div>
 
-    <h2>Generated Model</h2>
+    <h2>生成的模型</h2>
     <pre>{{modelAsJson}}</pre>
 </div>
 
@@ -54,10 +54,10 @@
 <div class="col-md-2">
 
     <div class="toolbox box box-grey box-padding">
-        <h3>New Elements</h3>
+        <h3>新的元素</h3>
         <ul>
-            <!-- The toolbox only allows to copy objects, not move it. After a new
-                 element was created, dnd-copied is invoked and we generate the next id -->
+            <!-- 该工具箱只允许复制对象，而不是移动它。后一个新
+                 元素被创造了，免打扰，复制被调用，我们生成一张ID -->
             <li ng-repeat="item in models.templates"
                 dnd-draggable="item"
                 dnd-effect-allowed="copy"
@@ -69,13 +69,13 @@
     </div>
 
     <div ng-if="models.selected" class="box box-grey box-padding">
-        <h3>Selected</h3>
-        <strong>Type: </strong> {{models.selected.type}}<br>
+        <h3>选</h3>
+        <strong>类型: </strong> {{models.selected.type}}<br>
         <input type="text" ng-model="models.selected.id" class="form-control" style="margin-top: 5px" />
     </div>
 
     <div class="trashcan box box-grey box-padding">
-        <!-- If you use [] as referenced list, the dropped elements will be lost -->
+        <!-- 如果你使用[]作为参考名单，被丢弃的元素都将丢失 -->
         <h3>Trashcan</h3>
         <ul dnd-list="[]">
             <li><img src="nested/trashcan.jpg"></li>
