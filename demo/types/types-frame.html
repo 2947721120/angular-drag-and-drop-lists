@@ -1,14 +1,14 @@
-<h1>Demo: Item Types</h1>
+<h1>项目类型：演示</h1>
 
 <div class="alert alert-success">
-    <strong>Instructions:</strong>
-    Drag &amp; drop the names to move them around. Note that the names can not be
-    dropped in the list for the wrong gender. This is achieved with the dnd-type and
-    dnd-allowed-types attributes.
-    This demo also shows the use of the dnd-disable-if attribute, which is used here
-    to limit the number of names per list, as well as fix Alex' position.
-    You can combine these functions with <a href="#/nested">nested lists</a>
-    to build very powerful UIs.
+    <strong>指令(Instructions):</strong>
+    拖动 &amp; 下降的名字给他们走动。注意，名称不能
+    丢弃列表为错误的性别。这是与DND型实现和
+    DND允许的类型属性.
+    该演示还展示了使用免打扰 - 禁用 - 如果属性，用在这里
+    以限制每列表名称的数目，以及修复Alex的位置。
+    您可以将这些功能与 <a href="#/nested">嵌套列表</a>
+    打造非常强大的用户界面.
 </div>
 
 <div class="typesDemo row">
@@ -16,7 +16,7 @@
 	<div ng-repeat="list in lists" class="col-md-4">
 		<div class="panel panel-info">
 			<div class="panel-heading">
-				<h3 class="panel-title">List of {{list.label}} (max. {{list.max}})</h3>
+				<h3 class="panel-title">列表 {{list.label}} (max. {{list.max}})</h3>
 			</div>
 			<div class="panel-body" ng-include="'types/types.html'"></div>
 		</div>
@@ -30,7 +30,7 @@
     <div class="col-md-4">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">List Models</h3>
+                <h3 class="panel-title">表模型</h3>
             </div>
             <div class="panel-body">
                 <pre class="code">{{modelAsJson}}</pre>
