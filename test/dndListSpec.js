@@ -5,7 +5,7 @@ describe('dndList', function() {
   beforeEach(inject(function(dndDropEffectWorkaround, dndDragTypeWorkaround) {
     dragTypeWorkaround = dndDragTypeWorkaround;
     dropEffectWorkaround = dndDropEffectWorkaround;
-    // Initialise internal state by calling dragstart.
+    //初始化内部状态的呼叫拖曳开始.
     createEvent('dragstart')._triggerOn(compileAndLink('<div dnd-draggable="{}"></div>'));
   }));
 
